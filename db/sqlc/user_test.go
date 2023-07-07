@@ -16,3 +16,13 @@ func TestListUser(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotEmpty(t, user)
 }
+
+func TestUpdateUser(t *testing.T) {
+	updated, err := q.UpdateUser(context.Background(), UpdateUserParams{
+		ID:       3,
+		Username: "supaman14",
+	})
+
+	assert.Nil(t, err)
+	assert.NotEmpty(t, updated)
+}
