@@ -1,0 +1,3 @@
+DROP IF EXISTS boxes;
+DROP IF EXISTS mails;
+DROP IF EXISTS users;
