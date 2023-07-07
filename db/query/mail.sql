@@ -13,10 +13,10 @@ WHERE receiver = $1;
 SELECT * FROM mails
 WHERE id = $1 LIMIT 1;
 
--- name: UpdateUser :one
+-- name: UpdateMail :one
 UPDATE mails SET title = $2, body = $3
 WHERE id = $1
 RETURNING *;
 
--- name: DeleteUser :exec
+-- name: DeleteMail :exec
 DELETE FROM mails WHERE id = $1;
