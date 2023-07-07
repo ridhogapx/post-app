@@ -26,3 +26,9 @@ func TestUpdateUser(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotEmpty(t, updated)
 }
+
+func TestDeleteUser(t *testing.T) {
+	err := q.DeleteUser(context.Background(), 4)
+
+	assert.Nil(t, err)
+}
