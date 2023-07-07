@@ -9,7 +9,7 @@ import (
 
 var conn *sql.DB
 
-func TestConnection(t *testing.T) {
+func TestMain(t *testing.M) {
 	var err error
 	conn, err = sql.Open("postgres", "postgres://root:root@localhost:5432/post_app?sslmode=disable")
 
