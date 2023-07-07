@@ -2,7 +2,6 @@ package db
 
 import (
 	"database/sql"
-	"os"
 	"testing"
 
 	_ "github.com/lib/pq"
@@ -10,7 +9,7 @@ import (
 
 var conn *sql.DB
 
-func TestMain(m *testing.M) {
+func TestConnection(t *testing.T) {
 	var err error
 	conn, err = sql.Open("postgres", "postgres://root:root@localhost:5432/post_app?sslmode=disable")
 
@@ -19,5 +18,4 @@ func TestMain(m *testing.M) {
 	}
 
 	New(conn)
-	os.Exit(m.Run())
 }
