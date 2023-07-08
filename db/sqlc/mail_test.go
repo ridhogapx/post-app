@@ -18,3 +18,10 @@ func TestCreateMail(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotEmpty(t, newMail)
 }
+
+func TestListMails(t *testing.T) {
+	list, err := q.ListMails(context.Background(), 2)
+
+	assert.Nil(t, err)
+	assert.NotEmpty(t, list)
+}
