@@ -9,10 +9,10 @@ import (
 
 func TestCreateMail(t *testing.T) {
 	newMail, err := q.CreateMail(context.Background(), CreateMailParams{
-		Title:    "Greet New Neighbour",
-		Body:     "Hi, my name Steven. I live next to your house!",
-		Receiver: 2,
-		Sender:   3,
+		Title:    "Farewell",
+		Body:     "Goodbye, mate!",
+		Receiver: 3,
+		Sender:   2,
 	})
 
 	assert.Nil(t, err)
